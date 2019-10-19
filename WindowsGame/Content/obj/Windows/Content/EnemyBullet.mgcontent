@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/c#/WindowsGame/WindowsGame/Content/Enemy.png</SourceFile>
-  <SourceTime>2019-10-19T23:00:47.3595464+03:00</SourceTime>
-  <DestFile>D:/c#/WindowsGame/WindowsGame/Content/bin/Windows/Content/Enemy.xnb</DestFile>
-  <DestTime>2019-10-19T23:00:53.4760685+03:00</DestTime>
+  <SourceFile>D:/c#/WindowsGame/WindowsGame/Content/EnemyBullet.png</SourceFile>
+  <SourceTime>2019-10-20T01:47:26.0960112+03:00</SourceTime>
+  <DestFile>D:/c#/WindowsGame/WindowsGame/Content/bin/Windows/Content/EnemyBullet.xnb</DestFile>
+  <DestTime>2019-10-20T01:55:27.5161804+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T19:35:54+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

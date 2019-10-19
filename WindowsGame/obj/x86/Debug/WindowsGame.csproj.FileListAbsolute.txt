@@ -16,7 +16,6 @@ D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\SharpDX.DXGI.xml
 D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
 D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
 D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\SharpDX.XInput.xml
-D:\c#\WindowsGame\WindowsGame\obj\x86\Debug\WindowsGame.csprojAssemblyReference.cache
 D:\c#\WindowsGame\WindowsGame\obj\x86\Debug\WindowsGame.csproj.CopyComplete
 D:\c#\WindowsGame\WindowsGame\obj\x86\Debug\WindowsGame.exe
 D:\c#\WindowsGame\WindowsGame\obj\x86\Debug\WindowsGame.pdb
@@ -28,3 +27,5 @@ D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\Content\Target.xnb
 D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\Content\Enemy.xnb
 D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\Content\Bullet.xnb
 D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\Content\Health.xnb
+D:\c#\WindowsGame\WindowsGame\bin\Windows\x86\Debug\Content\EnemyBullet.xnb
+D:\c#\WindowsGame\WindowsGame\obj\x86\Debug\WindowsGame.csprojAssemblyReference.cache

@@ -24,6 +24,7 @@ namespace WindowsGame
         public static Enemy Enemy { get; set; }
 
         public static List<Bullet> bullets = new List<Bullet>();
+        public static List<Bullet> enemyBullets = new List<Bullet>();
 
         public static Texture2D healthTexture;
         public static int bossMaxHealth = 800;
@@ -51,7 +52,13 @@ namespace WindowsGame
         }
         public static void CreateBullet()
         {
-            bullets.Add(new Bullet(Player.getPosPlayer(), getAngle(Player.getPosPlayer())));
+            bullets.Add(new Bullet(Player.getPosPlayer(), getAngle(Player.getPosPlayer()), 0));
+        }
+        public static void CreateEnemyBullet()
+        {
+            enemyBullets.Add(new Bullet(new Vector2(Enemy.getPos().X + 16, Enemy.getPos().Y + 16), Enemy.getAngle(), 1, 4));
+            enemyBullets.Add(new Bullet(new Vector2(Enemy.getPos().X + 16, Enemy.getPos().Y + 16), Enemy.getAngle(), 1, 4));
+            enemyBullets.Add(new Bullet(new Vector2(Enemy.getPos().X + 16, Enemy.getPos().Y + 16), Enemy.getAngle(), 1, 4));
         }
         static double getAngle(Vector2 Pos)
         {
@@ -78,12 +85,18 @@ namespace WindowsGame
                 bullet.Draw();
             }
 
+            foreach (Bullet bullet in enemyBullets)
+            {
+                bullet.Draw();
+            }
+
             Player.Draw();
             Enemy.Draw();
 
             Target.Draw();
 
-            SpriteBatch.Draw(healthTexture, new Vector2(0, 0), new Rectangle(0, 0, Width * bossHealth / bossMaxHealth, healthTexture.Height), Color.White);
+            SpriteBatch.Draw(healthTexture, new Vector2(0, 0), 
+                new Rectangle(0, 0, Width * bossHealth / bossMaxHealth, healthTexture.Height), Color.White);
         }
         public static void Update()
         {
@@ -91,14 +104,18 @@ namespace WindowsGame
             {
                 star.Update();
             }
-            for (int i = 0; i < bullets.Count; i++)
+            for (int i = 0; i < enemyBullets.Count; i++)
+            {
+                enemyBullets[i].Update();
+            }
+                for (int i = 0; i < bullets.Count; i++)
             {
                 bullets[i].Update();
 
                 // player bullets -> enemy
 
-                float enemyX = Enemy.Pos.X;
-                float enemyY = Enemy.Pos.Y;
+                float enemyX = Enemy.getPos().X;
+                float enemyY = Enemy.getPos().Y;
 
                 float x = (bullets[i].Pos.X + 4) - (enemyX + 16);
                 float y = (bullets[i].Pos.Y + 4) - (enemyY + 16);
@@ -110,20 +127,16 @@ namespace WindowsGame
                 {
                     bullets[i].isAlive = false;
                     bossHealth--;
-                    // bullets.RemoveAt(i);
-                    // --;
-                    // if (i < 0) break;
                 }
 
                 if (bullets[i].Hidden)
                 {
                     bullets[i].isAlive = false;
-                    // bullets.RemoveAt(i);
-                    // if (i > 0) i--;
                 }
             }
             bullets.RemoveAll(e => !e.isAlive);
-            Target.Update();
+            Target.Update();Target.Update();
+            Enemy.Update();
         }
     }
 
@@ -147,20 +160,4 @@ namespace WindowsGame
             Asteroids.SpriteBatch.Draw(Texture2D, Pos, color);
         }
     }
-
-    class Enemy
-    {
-        public Vector2 Pos;
-        Color color = Color.White;
-        public static Texture2D Texture2D { get; set; }
-        public Enemy(Vector2 Pos)
-        {
-            this.Pos = Pos;
-        }
-        public void Draw()
-        {
-            Asteroids.SpriteBatch.Draw(Texture2D, Pos, color);
-        }
-    }
-  
 }

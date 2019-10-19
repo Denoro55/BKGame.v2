@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>D:/c#/WindowsGame/WindowsGame/Content/star.png</SourceFile>
-  <SourceTime>2019-10-18T00:57:26.0626728+03:00</SourceTime>
+  <SourceTime>2019-10-19T23:45:14.5795778+03:00</SourceTime>
   <DestFile>D:/c#/WindowsGame/WindowsGame/Content/bin/Windows/Content/Star.xnb</DestFile>
-  <DestTime>2019-10-18T00:58:17.2772286+03:00</DestTime>
+  <DestTime>2019-10-19T23:45:19.584069+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T19:35:54+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

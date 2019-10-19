@@ -14,7 +14,7 @@ namespace WindowsGame
     {
         Vector2 Pos;
         Vector2 Dir;
-        Color color;
+        Color color = Color.White;
         public static Texture2D Texture2D { get; set; }
 
         public Star(Vector2 Pos, Vector2 Dir)
@@ -39,11 +39,11 @@ namespace WindowsGame
         {
             Pos = new Vector2(Asteroids.getRandInt(Asteroids.Width, Asteroids.Width + 300),
                 Asteroids.getRandInt(0, Asteroids.Height));
-            color = Color.FromNonPremultiplied(Asteroids.getRandInt(0, 256), Asteroids.getRandInt(0, 256), Asteroids.getRandInt(0, 256), 255);
+            // color = Color.FromNonPremultiplied(Asteroids.getRandInt(0, 256), Asteroids.getRandInt(0, 256), Asteroids.getRandInt(0, 256), 255);
         }
         public void Draw()
         {
-            Asteroids.SpriteBatch.Draw(Texture2D, Pos, color);
+            Asteroids.SpriteBatch.Draw(Texture2D, Pos, color * 0.33f);
         }
     }
 }

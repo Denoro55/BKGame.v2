@@ -59,6 +59,7 @@ namespace WindowsGame
 
             Enemy.Texture2D = Content.Load<Texture2D>("Enemy");
             Bullet.Texture2D = Content.Load<Texture2D>("Bullet");
+            Bullet.EnemyTexture2D = Content.Load<Texture2D>("EnemyBullet");
 
             Asteroids.healthTexture = Content.Load<Texture2D>("Health");
             // TODO: use this.Content to load your game content here

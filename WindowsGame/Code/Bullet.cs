@@ -14,14 +14,18 @@ namespace WindowsGame
     {
         public bool isAlive = true;
         public Vector2 Pos;
+        int type = 0;
         double Dir;
         Color color = Color.White;
         float speed = 5;
         public static Texture2D Texture2D { get; set; }
-        public Bullet(Vector2 Pos, double Dir)
+        public static Texture2D EnemyTexture2D { get; set; }
+        public Bullet(Vector2 Pos, double Dir, int type, int speed = 5)
         {
             this.Pos = Pos;
             this.Dir = Dir;
+            this.type = type;
+            this.speed = speed;
         }
         public bool Hidden
         {
@@ -40,7 +44,13 @@ namespace WindowsGame
         }
         public void Draw()
         {
-            Asteroids.SpriteBatch.Draw(Texture2D, Pos, color);
+            if (type == 0)
+            {
+                Asteroids.SpriteBatch.Draw(Texture2D, Pos, color);
+            } else
+            {
+                Asteroids.SpriteBatch.Draw(EnemyTexture2D, Pos, color);
+            }
         }
     }
 }

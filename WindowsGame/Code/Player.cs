@@ -20,7 +20,7 @@ namespace WindowsGame
 
         public Vector2 getPosPlayer()
         {
-            return new Vector2(this.Pos.X + Texture2D.Width / 2, this.Pos.Y + Texture2D.Height / 2);
+            return new Vector2(this.Pos.X + 8, this.Pos.Y + 8);
         }
 
         public Player(Vector2 Pos)
