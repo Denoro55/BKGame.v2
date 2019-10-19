@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/c#/WindowsGame/WindowsGame/Content/1.jpg</File>
+    <File>D:/c#/WindowsGame/WindowsGame/Content/Bullet.png</File>
+    <File>D:/c#/WindowsGame/WindowsGame/Content/Enemy.png</File>
+    <File>D:/c#/WindowsGame/WindowsGame/Content/File.spritefont</File>
+    <File>D:/c#/WindowsGame/WindowsGame/Content/Health.png</File>
+    <File>D:/c#/WindowsGame/WindowsGame/Content/Player.png</File>
+    <File>D:/c#/WindowsGame/WindowsGame/Content/star.png</File>
+    <File>D:/c#/WindowsGame/WindowsGame/Content/Target.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>background</File>
+    <File>Bullet</File>
+    <File>Enemy</File>
+    <File>SplashFont</File>
+    <File>Health</File>
+    <File>Player</File>
+    <File>Star</File>
+    <File>Target</File>
+  </DestFiles>
+</SourceFileCollection>
